@@ -1,0 +1,720 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ 
+    <!-- <link rel="stylesheet" type="text/css" href="css/team.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+ 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+      body{
+  background-color: whitesmoke;
+}
+/* image hover */
+ figure {
+  position: relative;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 190px;
+  max-width: 290px;
+  max-height: 560px;
+  width: 50%;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+ figure img {
+  position: relative;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+ figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+ figure figcaption::before,
+ figure figcaption::after {
+  pointer-events: none;
+}
+
+ figure figcaption,
+ figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+figure.effect-oscar {
+  background: -webkit-linear-gradient(45deg, #3084ac 0%, #1f8cbe 40%, #385679 100%);
+  background: linear-gradient(45deg, #3084ac 0%,#1f8cbe 40%,#385679 100%);
+}
+
+figure.effect-oscar img {
+  opacity: 0.9;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+   margin: auto;
+}
+
+figure.effect-oscar figcaption {
+  padding: 4em;
+  /* background-color: rgba(58,52,42,0.7); */
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
+}
+
+figure.effect-oscar figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 1px solid #fff;
+  content: '';
+}
+/* 
+figure.effect-oscar h2 {
+  margin: 20% 0 10px 0;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+} */
+
+figure.effect-oscar figcaption::before,
+figure.effect-oscar p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+figure.effect-oscar:hover h2 {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+figure.effect-oscar:hover figcaption::before,
+figure.effect-oscar:hover p {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+figure.effect-oscar:hover figcaption {
+  background-color: rgba(58,52,42,0);
+}
+
+figure.effect-oscar:hover img {
+  opacity: 0.4;
+}
+/*//image hover  */
+
+
+/*  */
+    </style>
+</head>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto');
+	</style>
+
+</head>
+<body>
+  <!-- navbar1 -->
+  <nav style="background-color: #7984EE"  id="navbar3">
+  <ul class="nav justify-content-center">
+  
+  <li class="nav-item">
+      <a class="nav-link" href="newsletter.html"><i class="fa fa-copy"></i><span class="ml-1">Newsletter</span></a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" href="publications.html"><i class="fa fa-file-o"></i><span class="ml-1">Publications</span></a>
+  </li>
+  <li class="nav-item" active>
+      <a class="nav-link" href="blog.html"><i class="fas fa-blog"></i><span class="ml-1">Blog</span></a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" href="login-signup/join.html"><i class="fa fa-user-plus"></i><span class="ml-1">Join Us</span></a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link" href="login-signup/login.html"><i class="fa fa-sign-in"></i><span class="ml-1">Login</span></a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa fa-bell"></i>
+    </a>
+      <ul class="dropdown-menu">
+        <li class="head text-light " style="background-color: #7984EE;">
+          <div class="row">
+            <div class="col-lg-12 col-sm-12 col-12">
+              <span>Notifications (1)</span>
+              <!-- <a href="" class="float-right text-light">Mark all as read</a> -->
+            </div>
+        </li>
+        <li class="notification-box">
+          <div class="row">
+            <div class="col-lg-3 col-sm-3 col-3 text-center">
+              <img src="/demo/man-profile.jpg" class="w-50 rounded-circle">
+            </div>    
+            <div class="col-lg-8 col-sm-8 col-8">
+              <strong class="text-info">David John</strong>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur
+              </div>
+              <small class="text-warning">27.11.2015, 15:00</small>
+            </div>    
+          </div>
+        </li>
+        <li class="footer text-center" style="background-color: #7984EE;">
+          <!-- <a href="" class="text-light">View All</a> -->
+        </li>
+      </ul>
+  </nav>
+<!-- navbar1 end -->
+	
+    <!-- navbar2 -->
+  <nav class="navbar navbar-light justify-content-between" style="background-color:#D6E4F0 ">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" width="100" height="90" style="margin-left: 20px;" class="d-inline-block align-top" alt="">
+        </a>
+        <form class="form-inline">
+          <div class="btn_wrapp"> 
+            <span style="position: absolute; 
+    z-index: 99;
+    width: 148px; 
+    height: 62px;
+    border-radius: 80px; 
+    font-size: 18px;
+    text-align: center;
+    line-height: 70px;
+    letter-spacing: 2px;
+    color: #EEEEED; 
+    background-color: #7984EE;
+    transition: all 1.2s ease;">Follow Us</span>
+            <div class="container3">
+                <i class="fa fa-facebook-f"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-github"></i>
+            </div>
+        </div>
+        </form>
+      </nav>
+    <!-- navbar2 end -->
+
+  <!-- navbar 3 -->
+    <nav class="navbar navbar-expand-lg navbar-mainbg sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-white"></i>
+	</button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+        <ul class="navbar-nav  nav-pills " style="margin: auto;">
+          <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+          <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Us</a>
+      </li>
+   
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Board</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="confer.html">Conference</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="paper.html">Paper Submission</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Journals</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="collaboration.html">Collaboration</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="membership.html">Membership</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+               
+      </div>
+    </nav>
+    <!-- navbar3 end -->
+    <br><br>
+  <!-----------------------------------Board Members---------------------------------------------->
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-1"></div>
+    <div class="col ">
+       <div class="row">  
+    <div class="col-6 col-sm-9" style="margin: 0 auto 20px;"> 
+      <h2 class="style4" style="overflow: hidden; position: relative; font:italic small-caps bold 28px Georgia, serif; color: #4E4F50;margin-top: 2%;">Executive Council</h2>
+    </div>
+    </div>
+       <br>
+     <div class="grid">
+       <figure class="effect-oscar">
+         <img src="images/DrJagdishPrasad.jpeg" alt="img09"/>
+         <figcaption>
+           <p style="margin-top: 10%;"> Prof. (Dr.) Jagdish Prasad Singh</p>
+           <p><b>President</b></p>
+           <!-- <a href="#">View more</a> -->
+         </figcaption>      
+       </figure>
+     </div>
+     <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrAnirudhPradhan.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: 30%;"> Prof.(Dr.) Anirudh Pradhan</p>
+          <p><b>Adviser</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrSanjeevKumar.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: -15%;"> Prof.(Dr.) Sanjeev Kumar</p>
+          <p><b>Vice President (Coordinator)</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrAnirudhPradhan.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: 20%;"> Prof.(Dr.) D. Sarkar</p>
+          <p><b>Vice President</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+  </div>
+</div>
+</div>
+    <div class="row">
+    <div class="col-1"></div>
+    <div class="col ">
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrDKGhosh.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: 20%;"> Prof.(Dr.) D. K. Ghosh</p>
+          <p><b>Vice President</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrJagdishPrasad.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: 20%;"> </p>
+          <p><b>Vice President</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrKKLavania.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: 20%;"></p>
+          <p><b>Vice President</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrPrashantJohri.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: -10%;"> Dr. Prashant Johri</p>
+          <p><b>Vice President (Central)</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col ">
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrKKLavania.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: -5%;"> Prof. (Dr) Krishan Kant Lavania</p>
+          <p><b>Coordinator</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrNarendraKumar.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: -5%;"> Prof. (Dr) Narendra Kumar</p>
+          <p><b>General Secretary</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrOlhaProkopenko.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: -5%;"> Prof.(Dr.) Umesh Sharma</p>
+          <p><b>Asst. General Secretary</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/NavneetMittal.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: 20%;"> Mr. Navneet Mittal</p>
+          <p><b>Secretary</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col ">
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrOlhaProkopenko.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: 10%;"> Dr. Olha Prokopenko</p>
+          <p><b>Overseas Adviser (Estonia)</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    <div class="grid">
+      <figure class="effect-oscar">
+        <img src="images/DrValentinaEmilia.jpeg" alt="img09"/>
+        <figcaption>
+          <p style="margin-top: -10%;"> Dr. Valentina Emilia Balas</p>
+          <p><b>Overseas Adviser (Romania)</b></p>
+          <!-- <a href="#">View more</a> -->
+        </figcaption>     
+      </figure>
+    </div>
+    </div>
+  </div>
+  <!-----------------------------------End Executive Councils-------------------------------------->
+  <br><br>
+  <!----------------------------------Advisory Board Members-------------------------------------->
+      <div style="background-color: #D6E4F0">
+      <div class="row">  
+    <div class="col-6 col-sm-9" style="margin: 0 auto 20px;"> 
+      <h2 class="style4" style="overflow: hidden; position: relative; font:italic small-caps bold 28px Georgia, serif; color: #4E4F50;margin-top: 2%;">Advisory Members</h2>
+      <br>
+    </div>
+    </div>
+     <div class="row justify-content-center" style="text-align: center;font-size: 18px;">
+      <div class="col">
+      <p>Dr. Aunkrisa Sangchumnong (Assumptions University of Thailand)</p>
+      <p>Dr. Avanish Kumar ( Director(CHD) MHRD, Department of Higher Education)</p>
+      <p>Dr. C.K. Jaggi (University of Delhi, Delhi)</p>
+      <p>Dr. D.S. Hooda (Rohtak, Haryana)</p>
+      <p>Dr. G.S. Khadekar (R.T.M. Nagpur University, Nagpur, Maharasthra)</p>
+      <p>Dr. J.P. Verma (LNIPE, Gwalior)</p>
+      <p>Dr. Manu Pratap Singh (Dr. B. R. Ambedkar University, Agra, U.P.)</p>
+      <p>Dr. R.B. Bapat (Indian Statistical Institute, Delhi)</p>
+      <p>Dr. P. K. Sahoo, BITS, Pilani</p>
+      <p>Dr. Sanjay Chaudhary (Dr. B. R. Ambedkar University, Agra, U.P.)</p>
+      <p>Prof. ( Dr. ) Valentina Emilia Balas (Aurel Vlaicu University of Arad, Romania)</p>
+     </div>
+   </div>
+ </div>
+  <!----------------------------------End Advisory Board Members-------------------------------------->
+  <br>
+  <!----------------------------------Honorary Board Members-------------------------------------->
+      <div>
+      <div class="row">  
+    <div class="col-6 col-sm-9" style="margin: 0 auto 20px;"> 
+      <h2 class="style4" style="overflow: hidden; position: relative; font:italic small-caps bold 28px Georgia, serif; color: #4E4F50;margin-top: 2%;">Honarary Members</h2>
+      <br>
+    </div>
+    </div>
+     <div class="row justify-content-center" style="text-align: center;font-size: 18px;">
+      <div class="col">
+        <p>Dr. Anil Kumar Mohaptra (S.F. University, Odessa)</p>
+        <p>Dr. Arvind Prash Dwivedi (Govt. Sanjay Gandhi Smriti Autonomous P.G. College, Sidsi, M.P.)</p>
+        <p>Dr. Aryal Sita (Govt. University, Nepal)</p>
+        <p>Dr. Deepak Kumar (MRIU, Faridabad)</p>
+        <p>Dr. Devashish Nandi (K.N. University, Asensol, W.B.)</p>
+        <p>Dr. Esakki Muthu (M.S. University, Tamilnadu)</p>
+        <p>Dr. Gorachand Layek (University Burdwan, W.B.)</p>
+        <p>Dr. Kashinath Lellala (JSS University, Mysore)</p>
+        <p>Dr. Kuldeep Kumar ( BTI, Bareilly)</p>
+       <p> Dr. Mehul Mahrishi (SKIT, Jaipur)</p>
+        <p>Dr. Poornima Tiwari ( Sant Hirdaram Girls College, Bhopal, M.P.)</p>
+        <p>Prof. Prashant Johri ( Galgotias University, Noida)</p>
+        <p>Dr. R. Radhakrishnan (Symbiosis Low College, Hyderabad)</p>
+        <p>Dr. P. K. Sahoo, BITS, Pilani</p>
+        <p>Dr. Sudhanshu Agarwal (INSA, Delhi)</p>
+        <p>Dr. Sudhanshu Dinesh Joshi (Doon University, Dehradun)</p>
+        <p>Dr. Suyash Mishra (IET, Lucknow)</p>
+        <p>Dr. Vivek Raich (Holkar College, Indore, M.P.)</p>
+     </div>
+   </div>
+ </div>
+  <!----------------------------------End Honarary Board Members-------------------------------------->
+  <br>
+  <!----------------------------------Executive Board Members-------------------------------------->
+      <div style="background-color: #D6E4F0">
+      <div class="row">  
+    <div class="col-6 col-sm-9" style="margin: 0 auto 20px;"> 
+      <h2 class="style4" style="overflow: hidden; position: relative; font:italic small-caps bold 28px Georgia, serif; color: #4E4F50;margin-top: 2%;">Executive Members</h2>
+      <br>
+    </div>
+    </div>
+     <div class="row justify-content-center" style="text-align: center;font-size: 18px;">
+      <div class="col">
+        <p>Dr. Jagdish Prasad (Jaipur, Rajasthan)</p>
+        <p>Dr. Debasis Sarkar (West Bengal)</p>
+        <p>Dr. D.S. Hooda (Rohtak, Haryana)</p>
+        <p>Dr. Narendra Kumar (Jaipur, Rajasthan)</p>
+        <p>Dr. Ram Naresh Singh Sishodia (Sardar Patel Mahavidyalaya, Chandrapur, MS)</p>
+        <p>Dr. R.K. Devaliya (M.P.)</p>
+        <p>Dr. Sunil Kha (JUIT, Solan, Himachal Pradesh)</p>
+        <p>Mr. Vijay Soni (TMU, Moradabad, U.P.)</p>
+        <p>Dr. Krishan Kant Lavania (Jaipur, Rajasthan)</p>
+        <p>Mr. Navneet Mittal (Jaipur, Rajasthan)</p>
+        <p>Mr. Bhanu Pratap Singh (Jaipur, Rajasthan)</p>
+     </div>
+   </div>
+ </div>
+  <!----------------------------------End Executive Board Members-------------------------------------->
+<br>
+  <!----------------------------------Life Board Members-------------------------------------->
+      <div>
+      <div class="row">  
+    <div class="col-6 col-sm-9" style="margin: 0 auto 20px;"> 
+      <h2 class="style4" style="overflow: hidden; position: relative; font:italic small-caps bold 28px Georgia, serif; color: #4E4F50;margin-top: 2%;">Life Members</h2>
+      <br>
+    </div>
+    </div>
+     <div class="row justify-content-center" style="text-align: center;font-size: 18px;">
+      <div class="col">
+        <p>Mr. Bhanu Pratap Singh ( Rajasthan University, Jaipur)</p>
+        <p>Mr. Navneet Mittal (S.W. P.G. College, Jaipur)</p>
+        <p>Mr. Sanjay Sharma (S.W. P.G. College, Jaipur)</p>
+        <p>Dr. Shailendra Jain (S.W. P.G. College, Jaipur)</p>
+        <p>Mr. Amit Singh (Manipal University, Jaipur, Rajasthan, India)</p>
+        <p>Dr. Ambuj Kumar Mishra, GLA University, Mathura, Uttar Pradesh, India</p>
+        <p>Dr. VIPIN Chandra Dubey, GLA University, Mathura, Uttar Pradesh, India</p>
+        <p>Dr. Shikha Srivastava, GLA University, Mathura, Uttar Pradesh, India</p>
+        <p>Dr. Gunjan Varshney, GLA University, Mathura, Uttar Pradesh, India</p>
+        <p>Dr. Archana Dixit, GLA University, Mathura, Uttar Pradesh, India</p>
+        <p>Dr. Priyanka Garg, GLA University, Mathura, Uttar Pradesh, India</p>
+     </div>
+   </div>
+ </div>
+  <!----------------------------------End Life Board Members-------------------------------------->
+<br>
+<!--Footer-->
+<footer class="page-footer font-small teal pt-4">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+       <div class="col">
+       </div>
+
+      <!-- Grid column -->
+      <div class="col-md-7 mt-md-0 mt-3">
+        <!-- Content -->
+         <div class="row">
+           <div class="col-md-3">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <br><br>
+              <h3>ABOUT US</h3>
+          </div>
+           <ul>
+            <li><a href="index.html">FIRMS HOME</a></li>
+            <li><a href="#">Digital Xplore</a></li>
+            <li><a href="team.html">Board Members</a></li>
+            <li><a href="#">Conferences</a></li>
+            <li><a href="#">Journals</a></li>
+        </ul>
+        </div>
+           </div>
+           <div class="col-sm-3">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <br><br>
+                <h3>IMPORTANT LINKS</h3>
+            </div>
+            <ul>
+              <li><a href="excellentpaper.html">FIRMS Excellent Paper</a></li>
+              <li><a href="login-signup/join.html">Join FIRMS</a></li>
+              <li><a href="#">FIRMS Membership</a></li>
+              <li><a href="#">Research Funding</a></li>
+          </ul>
+          </div>
+           </div>
+           <div class="col-sm-3">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <br><br>
+                <h3>JOURNAL LINKS</h3>
+            </div>
+            <ul>
+               <li><a href="#">Mathematical Sciences Journal</a></li>
+                <li><a href="#">Stastical Methods Journal</a></li>
+                <li><a href="#">Applied Engineering Journal</a></li>
+                <li><a href="#">Agricultural Management Journal</a></li>
+                <li><a href="#">Computer Science Journal</a></li>
+                <li><a href="#">Applied Economics Journal</a></li>
+          </ul>
+          </div>
+           </div>
+             <div class="col-sm-3">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <br><br>
+                  <h3>MORE LINKS</h3>
+              </div>
+              <ul>
+                <li><a href="confer.html">Upcoming Conference</a></li>
+                <li><a href="#">Conference Gallery</a></li>
+                <li><a href="newsletter.html">FIRMS News Letter</a></li>
+                <li><a href="#">Online Payment</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            </div>
+             </div>
+             
+           </div>
+           <!--/content-->
+      </div>
+      <!-- Grid column -->
+      
+      <!-- Grid column -->
+      <div class="col-md-4 mb-md-0 mb-3">
+        <ul class="list-unstyled">
+          <li>
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                  <h4>Find us</h4>
+                  <span>82/94 Arawali Marg, Mansarovar <br>Jaipur - 302020, India</span>
+              </div>
+          </div>
+          </li>
+          
+          <li>
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                  <h4>Call us</h4>
+                  <span> 0141-2781441</span>
+              </div>
+          </div>
+          </li>
+         
+          <li>
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                  <h4>Mail us</h4>
+                  <span> info@firmsindia.org</span>
+              </div>
+          </div>
+          </li>
+          <li>
+            <div class="single-cta">
+              <i class="fa fa-comment"></i>
+              <div class="cta-text">
+                  <h4>Follow us</h4>
+                  <!-- <span>mail@info.com</span> -->
+              </div>
+          </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    
+    <!-- Grid row -->
+  </div>
+  <hr class="new5">
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="copyright-area">
+                
+                  <div class="wave wave1">
+                    <div class="copyright-text">
+                      <p> &copy; - 2020 Institute of Research and Journals. is registered as a Charity under Peoples Empowerment Trust Copyright &copy; 2020, All rights reserved</p>
+                  </div>
+                  </div>
+                  <div class="wave wave2"></div>
+                  <div class="wave wave3"></div>
+                  <div class="wave wave4"></div>     
+                  
+  </div>
+  
+  <!-- Copyright -->
+
+</footer>
+<!--/Footer-->
+   <!--javascript links-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+    <script src="index.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <style>
+    /*-- Google Fonts --*/
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou");
+
+body {
+  background-image: url(images/rebuilding.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 1;
+}
+#main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+  z-index: 2;
+}
+#footer {
+  position: absolute;  
+  bottom: 12px; 
+  z-index: 2;
+}
+.modal {
+  font-family: verdana, sans serif;
+}
+
+  </style>
+</head>
+  <body>
+<div class="overlay"></div>
+<div class="container">
+  <div id="main" class="d-flex justify-content-center align-items-center p-2">
+    <div class="container text-center">
+    <h1 class="w-100 mb-3">Rebuilding...</h1>
+            <!-- Spinner -->
+      <div class="spinner-grow" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+      <!-- END Spinner -->
+
+    <p class="mt-3">News letters will be soon available!! Thank you for your patience.</p>     
+    <br><br> 
+      <a href="index.html"><button type="button" class="btn btn-lg btn-primary" data-toggle="modal">Go Home</button></a>
+
+    </div>
+  </div>
+
+  
+    <div id="footer" class="container text-center text-white">
+   <p> © 2018 Forum for Interdisciplinary Research in Mathematical Sciences. All rights reserved</p>  </div>
+</div>
+</body>
+</html>
